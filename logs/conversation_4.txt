@@ -1,0 +1,246 @@
+ SystemMessage 
+You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.
+
+# Input Format
+Task
+Previous steps
+Current URL
+Open Tabs
+Interactive Elements
+[index]<type>text</type>
+- index: Numeric identifier for interaction
+- type: HTML element type (button, input, etc.)
+- text: Element description
+Example:
+[33]<button>Submit Form</button>
+
+- Only elements with numeric indexes in [] are interactive
+- elements without [] provide only context
+
+# Response Rules
+1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:
+{"current_state": {"evaluation_previous_goal": "Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not",
+"memory": "Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz",
+"next_goal": "What needs to be done with the next immediate action"},
+"action":[{"one_action_name": {// action-specific parameter}}, // ... more actions in sequence]}
+
+2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.
+Common action sequences:
+- Form filling: [{"input_text": {"index": 1, "text": "username"}}, {"input_text": {"index": 2, "text": "password"}}, {"click_element": {"index": 3}}]
+- Navigation and extraction: [{"go_to_url": {"url": "https://example.com"}}, {"extract_content": {"goal": "extract the names"}}]
+- Actions are executed in the given order
+- If the page changes after an action, the sequence is interrupted and you get the new state.
+- Only provide the action sequence until an action which changes the page state significantly.
+- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page
+- only use multiple actions if it makes sense.
+
+3. ELEMENT INTERACTION:
+- Only use indexes of the interactive elements
+- Elements marked with "[]Non-interactive text" are non-interactive
+
+4. NAVIGATION & ERROR HANDLING:
+- If no suitable elements exist, use other functions to complete the task
+- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.
+- Handle popups/cookies by accepting or closing them
+- Use scroll to find elements you are looking for
+- If you want to research something, open a new tab instead of using the current tab
+- If captcha pops up, try to solve it - else try a different approach
+- If the page is not fully loaded, use wait action
+
+5. TASK COMPLETION:
+- Use the done action as the last action as soon as the ultimate task is complete
+- Dont use "done" before you are done with everything the user asked you, except you reach the last step of max_steps. 
+- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!
+- If you have to do something repeatedly for example the task says for "each", or "for all", or "x times", count always inside "memory" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.
+- Don't hallucinate actions
+- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. 
+
+6. VISUAL CONTEXT:
+- When an image is provided, use it to understand the page layout
+- Bounding boxes with labels on their top right corner correspond to element indexes
+
+7. Form filling:
+- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.
+
+8. Long tasks:
+- Keep track of the status and subresults in the memory. 
+
+9. Extraction:
+- If your task is to find information - call extract_content on the specific pages to get and store the information.
+Your responses must be always JSON with the specified format.
+
+ HumanMessage 
+Your ultimate task is: """go to youtube and search for 'python programming'""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+
+ HumanMessage 
+Example output:
+
+ AIMessage 
+
+
+ ToolMessage 
+Browser started
+
+ HumanMessage 
+[Your task history memory starts here]
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🔗  Navigated to https://www.youtube.com/
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: ⌨️  Input python programming into index 3
+
+ HumanMessage 
+Action result: Something new appeared after action 1 / 2
+
+ HumanMessage 
+[Task history memory ends]
+[Current state starts here]
+The following is one-time information - if you need to remember it write it to memory:
+Current url: https://www.youtube.com/
+Available tabs:
+[TabInfo(page_id=0, url='https://www.youtube.com/', title='YouTube')]
+Interactive elements from top layer of the current page inside the viewport:
+[Start of page]
+[0]<button Guide/>
+[1]<a YouTube Home/>
+DE
+[2]<div />
+[3]<input text;combobox;true;Search;search_query/>
+[4]<button Clear search query/>
+[5]<button Search/>
+[6]<div listbox/>
+[7]<div option>python programming/>
+[8]<div option;python programming for beginners>python programming
+for beginners/>
+[9]<div option;python programming full course>python programming
+full course/>
+[10]<div option;python programming language>python programming
+language/>
+[11]<div option;python programming course>python programming
+course/>
+[12]<div option;python programming interview questions>python programming
+interview questions/>
+[13]<div option;python programming with mash>python programming
+with mash/>
+[14]<div option;python programming full course in english>python programming
+full course in english/>
+[15]<div option;python programming for machine learning>python programming
+for machine learning/>
+[16]<div option;python programming for raspberry pi>python programming
+for raspberry pi/>
+[17]<div option;python programming btech 2nd year aktu>python programming
+btech 2nd year aktu/>
+[18]<div option;python programming basic to advanced>python programming
+basic to advanced/>
+[19]<div option;python programming projects for beginners>python programming
+projects for beginners/>
+[20]<div option;python programming tutorial>python programming
+tutorial/>
+[21]<button Report search predictions/>
+[22]<button Search with your voice/>
+[23]<button Create/>
+[24]<button Notifications/>
+[25]<button Account menu/>
+[26]<ytd-mini-guide-entry-renderer tab;Home/>
+[27]<a Home>Home
+Home/>
+[28]<ytd-mini-guide-entry-renderer tab;Shorts/>
+[29]<a Shorts>Shorts
+Shorts/>
+[30]<ytd-mini-guide-entry-renderer tab;Subscriptions/>
+[31]<a Subscriptions>Subscriptions
+Subscriptions/>
+[32]<ytd-mini-guide-entry-renderer You;tab/>
+[33]<a You>You
+You/>
+[34]<yt-chip-cloud-chip-renderer tab>All
+All/>
+[35]<yt-chip-cloud-chip-renderer tab>AI
+AI/>
+Source code
+Podcasts
+Music
+Mixes
+Gaming
+[36]<yt-chip-cloud-chip-renderer tab>Sets
+Sets/>
+[37]<yt-chip-cloud-chip-renderer tab>Entrepreneurship
+Entrepreneurship/>
+Real analysis
+[38]<yt-chip-cloud-chip-renderer tab>Thoughts
+Thoughts/>
+[39]<yt-chip-cloud-chip-renderer tab>Laptops
+Laptops/>
+[40]<yt-chip-cloud-chip-renderer tab>Statistics
+Statistics/>
+[41]<yt-chip-cloud-chip-renderer tab>Recently uploaded
+Recently uploaded/>
+[42]<yt-chip-cloud-chip-renderer tab>Watched
+Watched/>
+[43]<button Next/>
+3:50:40
+[44]<div button;Go to channel/>
+How to Build & Sell AI Agents: Ultimate Beginner’s Guide
+[45]<a Liam Ottley/>
+44K views
+1 day ago
+Shorts
+[46]<button More actions/>
+[47]<a />
+[48]<img />
+[49]<div 1.6M views/>
+[50]<a Nikhil's Relationship with PVR Stock #shorts/>
+[51]<button More actions/>
+[52]<a />
+[53]<img />
+[54]<div 1.9K views/>
+[55]<a If you don't want to USE AI as a developer you need to watch THIS/>
+[56]<button More actions/>
+[57]<a />
+[58]<img />
+[59]<div 1.6M views/>
+[60]<a Jamie Oliver Mess Up Rice/>
+[61]<button More actions/>
+[62]<a 3:42
+3:42
+Now playing/>
+[63]<div button;Go to channel/>
+[64]<a START Summit X Hack Closing by START Global 444 views 3 years ago 3 minutes, 42 seconds>START Summit X Hack Closing/>
+[65]<button Action menu/>
+[66]<a 8:30
+8:30
+Now playing/>
+[67]<div button;Go to channel/>
+[68]<a 6 - MCP Marketplace: 3,000+ Free Open-Source MCP servers 🔥 by AI Anytime 555 views 17 hours ago 8 minutes, 30 seconds>6 - MCP Marketplace: 3,000+ Free Open-Source MCP servers 🔥/>
+[69]<button Action menu/>
+... 5509 pixels below - scroll or extract content to see more ...
+Current step: 3/100Current date and time: 2025-03-29 04:07
+
+ RESPONSE
+{
+  "current_state": {
+    "evaluation_previous_goal": "Failed - After inputting the text, the page changed and the search button needs to be clicked again.",
+    "memory": "Starting the task: Go to youtube and search for 'python programming'.",
+    "next_goal": "Click the search button."
+  },
+  "action": [
+    {
+      "click_element": {
+        "index": 5
+      }
+    }
+  ]
+}

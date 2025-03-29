@@ -1,0 +1,242 @@
+ SystemMessage 
+You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.
+
+# Input Format
+Task
+Previous steps
+Current URL
+Open Tabs
+Interactive Elements
+[index]<type>text</type>
+- index: Numeric identifier for interaction
+- type: HTML element type (button, input, etc.)
+- text: Element description
+Example:
+[33]<button>Submit Form</button>
+
+- Only elements with numeric indexes in [] are interactive
+- elements without [] provide only context
+
+# Response Rules
+1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:
+{"current_state": {"evaluation_previous_goal": "Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not",
+"memory": "Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz",
+"next_goal": "What needs to be done with the next immediate action"},
+"action":[{"one_action_name": {// action-specific parameter}}, // ... more actions in sequence]}
+
+2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.
+Common action sequences:
+- Form filling: [{"input_text": {"index": 1, "text": "username"}}, {"input_text": {"index": 2, "text": "password"}}, {"click_element": {"index": 3}}]
+- Navigation and extraction: [{"go_to_url": {"url": "https://example.com"}}, {"extract_content": {"goal": "extract the names"}}]
+- Actions are executed in the given order
+- If the page changes after an action, the sequence is interrupted and you get the new state.
+- Only provide the action sequence until an action which changes the page state significantly.
+- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page
+- only use multiple actions if it makes sense.
+
+3. ELEMENT INTERACTION:
+- Only use indexes of the interactive elements
+- Elements marked with "[]Non-interactive text" are non-interactive
+
+4. NAVIGATION & ERROR HANDLING:
+- If no suitable elements exist, use other functions to complete the task
+- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.
+- Handle popups/cookies by accepting or closing them
+- Use scroll to find elements you are looking for
+- If you want to research something, open a new tab instead of using the current tab
+- If captcha pops up, try to solve it - else try a different approach
+- If the page is not fully loaded, use wait action
+
+5. TASK COMPLETION:
+- Use the done action as the last action as soon as the ultimate task is complete
+- Dont use "done" before you are done with everything the user asked you, except you reach the last step of max_steps. 
+- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!
+- If you have to do something repeatedly for example the task says for "each", or "for all", or "x times", count always inside "memory" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.
+- Don't hallucinate actions
+- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. 
+
+6. VISUAL CONTEXT:
+- When an image is provided, use it to understand the page layout
+- Bounding boxes with labels on their top right corner correspond to element indexes
+
+7. Form filling:
+- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.
+
+8. Long tasks:
+- Keep track of the status and subresults in the memory. 
+
+9. Extraction:
+- If your task is to find information - call extract_content on the specific pages to get and store the information.
+Your responses must be always JSON with the specified format.
+
+ HumanMessage 
+Your ultimate task is: """go to youtube and search for 'python programming'""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+
+ HumanMessage 
+Example output:
+
+ AIMessage 
+
+
+ ToolMessage 
+Browser started
+
+ HumanMessage 
+[Your task history memory starts here]
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🔗  Navigated to https://www.youtube.com/
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: ⌨️  Input python programming into index 3
+
+ HumanMessage 
+Action result: Something new appeared after action 1 / 2
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🖱️  Clicked button with index 5:
+
+ HumanMessage 
+[Task history memory ends]
+[Current state starts here]
+The following is one-time information - if you need to remember it write it to memory:
+Current url: https://www.youtube.com/results?search_query=python+programming
+Available tabs:
+[TabInfo(page_id=0, url='https://www.youtube.com/results?search_query=python+programming', title='python programming - YouTube')]
+Interactive elements from top layer of the current page inside the viewport:
+[Start of page]
+[0]<button Guide/>
+[1]<a YouTube Home/>
+DE
+[2]<div />
+[3]<input text;combobox;true;Search;search_query/>
+[4]<button Clear search query/>
+[5]<button Search/>
+[6]<button Search with your voice/>
+[7]<button Create/>
+[8]<button Notifications/>
+[9]<button Account menu/>
+[10]<ytd-mini-guide-entry-renderer tab;Home/>
+[11]<a Home>Home
+Home/>
+[12]<ytd-mini-guide-entry-renderer tab;Shorts/>
+[13]<a Shorts>Shorts
+Shorts/>
+[14]<ytd-mini-guide-entry-renderer tab;Subscriptions/>
+[15]<a Subscriptions>Subscriptions
+Subscriptions/>
+[16]<ytd-mini-guide-entry-renderer You;tab/>
+[17]<a You>You
+You/>
+[18]<yt-chip-cloud-chip-renderer tab>All
+All/>
+[19]<yt-chip-cloud-chip-renderer tab>AI
+AI/>
+[20]<yt-chip-cloud-chip-renderer tab>Source code
+Source code/>
+[21]<yt-chip-cloud-chip-renderer tab>Podcasts
+Podcasts/>
+[22]<yt-chip-cloud-chip-renderer tab>Music
+Music/>
+[23]<yt-chip-cloud-chip-renderer tab>Mixes
+Mixes/>
+[24]<yt-chip-cloud-chip-renderer tab>Gaming
+Gaming/>
+[25]<yt-chip-cloud-chip-renderer tab>Sets
+Sets/>
+[26]<yt-chip-cloud-chip-renderer tab>Entrepreneurship
+Entrepreneurship/>
+Real analysis
+[27]<yt-chip-cloud-chip-renderer tab>Thoughts
+Thoughts/>
+[28]<yt-chip-cloud-chip-renderer tab>Laptops
+Laptops/>
+[29]<yt-chip-cloud-chip-renderer tab>Statistics
+Statistics/>
+[30]<yt-chip-cloud-chip-renderer tab>Recently uploaded
+Recently uploaded/>
+[31]<yt-chip-cloud-chip-renderer tab>Watched
+Watched/>
+[32]<button Next/>
+[33]<div Ad – Jetzt zur Ausbildung Betriebliches Gesundheitsmanagement anmelden – 30 seconds – Beim IST die Ausbildung Betriebliches Gesundheitsmanagement machen! – IST-Studieninstitut / IST-Hochschule – play video;button/>
+[34]<a Now playing/>
+[35]<img />
+[36]<a Go to channel: IST-Studieninstitut / IST-Hochschule.;IST-Studieninstitut / IST-Hochschule/>
+Jetzt zur Ausbildung Betriebliches Gesundheitsmanagement anmelden
+[37]<button />
+Sponsored
+IST-Studieninstitut / IST-Hochschule
+[38]<a Watch/>
+[39]<a Mehr infos/>
+[40]<a 3:50:40
+3:50:40
+Now playing/>
+[41]<img />
+[42]<div button;Go to channel/>
+[43]<a How to Build & Sell AI Agents: Ultimate Beginner’s Guide by Liam Ottley 44,916 views 1 day ago 3 hours, 50 minutes>How to Build & Sell AI Agents: Ultimate Beginner’s Guide/>
+[44]<a Liam Ottley/>
+44K views
+1 day ago
+[45]<button Action menu/>
+Shorts
+[46]<button More actions/>
+[47]<a />
+[48]<img />
+[49]<div 1.6M views/>
+[50]<a Nikhil's Relationship with PVR Stock #shorts/>
+[51]<button More actions/>
+[52]<a />
+[53]<img />
+[54]<div 1.9K views/>
+[55]<a If you don't want to USE AI as a developer you need to watch THIS/>
+[56]<button More actions/>
+[57]<a />
+[58]<img />
+[59]<div 1.6M views/>
+[60]<a Jamie Oliver Mess Up Rice/>
+[61]<button More actions/>
+[62]<a 3:42
+3:42
+Now playing/>
+[63]<button Action menu/>
+[64]<a 8:30
+8:30
+Now playing/>
+[65]<button Action menu/>
+... 11924 pixels below - scroll or extract content to see more ...
+Current step: 4/100Current date and time: 2025-03-29 04:07
+
+ RESPONSE
+{
+  "current_state": {
+    "evaluation_previous_goal": "Success - I have clicked the search button and the results are displayed.",
+    "memory": "Starting the task: Go to youtube and search for 'python programming'.",
+    "next_goal": "Complete the task."
+  },
+  "action": [
+    {
+      "done": {
+        "text": "I have successfully searched for 'python programming' on youtube.",
+        "success": true
+      }
+    }
+  ]
+}
