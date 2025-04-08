@@ -70,7 +70,7 @@ Common action sequences:
 Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """go to youtube and search for 'python programming'""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """Find a job on linkedin and search for job related to Software development and print the job description""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -84,6 +84,9 @@ Browser started
  HumanMessage 
 [Your task history memory starts here]
 
+ HumanMessage 
+Action result: 🔗  Opened new tab with https://www.linkedin.com/jobs/
+
  AIMessage 
 
 
@@ -91,16 +94,7 @@ Browser started
 
 
  HumanMessage 
-Action result: 🔗  Navigated to https://www.youtube.com/
-
- AIMessage 
-
-
- ToolMessage 
-
-
- HumanMessage 
-Action result: ⌨️  Input python programming into index 3
+Action result: ⌨️  Input Software development into index 1
 
  HumanMessage 
 Action result: Something new appeared after action 1 / 2
@@ -112,129 +106,359 @@ Action result: Something new appeared after action 1 / 2
 
 
  HumanMessage 
-Action result: 🖱️  Clicked button with index 5:
+Action result: 🖱️  Clicked button with index 4: software development
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 📄  Extracted from page
+: ```json
+{
+ "job_description": "Wir gehören zu den Top-Adressen in der IT-Welt und fokussieren uns auf die Optimierung der Kerngeschäftsprozesse unserer Kunden. Durch den smarten Einsatz maßgeschneiderter IT-Lösungen unterstützen wir unsere Kunden dabei, das Beste aus ihrem Business und aktuellen Technologien herauszuholen. Unseren Erfolg aber erreichen wir nur durch eins: die Menschen bei adesso! Sie bringen Ideen, fachliches Know how und Technologien zusammen. Gemeinsam programmieren wir (deine) Zukunft bei adesso.\n\n**DEINE ROLLE**\n\n*   Kundenprojekte gestalten: Du arbeitest an abwechslungsreichen Softwareprojekten und begleitest sie von der Idee bis zur Umsetzung.\n*   Anforderungen analysieren: Du erweiterst kundenspezifische Anforderungen fachlich und technisch.\n*   Agile Methoden nutzen: Du setzt moderne Entwicklungsmethoden ein und programmierst mit aktuellen Technologien im Java-Umfeld.\n*   Teamarbeit fördern: Du arbeitest in interdisziplinären Projektteams an abwechslungsreichen Tätigkeiten.\n*   Qualität sichern: Du übernimmst Aufgaben von der Programmierung bis zur Qualitätssicherung.\n*   Wissen aufbauen: Du entwickelst dich fachlich und technisch weiter, während du von Beginn an Verantwortung übernimmst.\n**DEIN PROFIL**\n\n*   Ausbildung: Ein abgeschlossenes Studium oder eine Ausbildung im IT-Bereich bildet deine Basis für diese Rolle.\n*   Java-Know-how: Du hast Erfahrung in der Java-Entwicklung, auch mit Frameworks wie Spring Boot oder Hibernate.\n*   Lernfreude: Du punktest mit großer Lernfreude und Bereitschaft, neue Themen zu entdecken.\n*   Teamgeist: Du bist kommunikativ, hilfsbereit und bringst eine positive Haltung in deine Projekte ein.\n*   Sprachkenntnisse: Deine sehr guten Deutsch- sowie gute Englischkenntnisse ermöglichen dir eine sichere Kommunikation.\nUnser Versprechen: Du wirst dich bei uns wohlfühlen! Kollegial, familiär und auf Augenhöhe – wir leben Austausch, Teamgeist und einen respektvollen Umgang miteinander. Diversität und verschiedene Blickwinkel werden bei uns genauso geschätzt wie du als Mensch. Das und viel mehr steht für unser ganz besonderes Wir-Gefühl. Für das es sogar ein Wort gibt: adessi.\n\nUnsere Kultur und das Zusammenarbeiten sind geprägt von gegenseitiger Wertschätzung, Anerkennung und Unterstützung. Das verbindet uns hierarchieübergreifend – auch im Home-Office. So belegen wir zum wiederholten Mal den 1. Platz beim Wettbewerb „Deutschlands Beste Arbeitgeber in der ITK“!. Unser umfangreiches Trainingsangebot und ein transparentes Laufbahnstufenmodell für alle sorgen dafür, dass deine Entwicklung bei uns nicht stillsteht. Denn gemeinsam zu wachsen und Chancengeber zu sein, das ist programmiert in unserer DNA."
+}
+```
 
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.youtube.com/results?search_query=python+programming
+Current url: https://www.linkedin.com/jobs/search/?currentJobId=3733048026&geoId=105002202&keywords=software%20development&origin=JOBS_HOME_KEYWORD_AUTOCOMPLETE&refresh=true
 Available tabs:
-[TabInfo(page_id=0, url='https://www.youtube.com/results?search_query=python+programming', title='python programming - YouTube')]
+[TabInfo(page_id=0, url='https://mail.google.com/mail/u/0/#inbox', title='Inbox (1) - mgsukhan@gmail.com - Gmail'), TabInfo(page_id=1, url='https://discord.com/channels/1303749220842340412/1305549200678850642', title='(225) Discord | #showcase-your-work | Browser Use'), TabInfo(page_id=2, url='https://docs.browser-use.com/customize/supported-models', title='Supported Models - Browser Use'), TabInfo(page_id=3, url='https://www.linkedin.com/jobs/', title='(25) Jobs | LinkedIn'), TabInfo(page_id=4, url='https://cms.sic.saarland/sysarch25/materials', title='Materials'), TabInfo(page_id=5, url='https://www.linkedin.com/jobs/search/?currentJobId=3733048026&geoId=105002202&keywords=software%20development&origin=JOBS_HOME_KEYWORD_AUTOCOMPLETE&refresh=true', title='(25) software development Jobs | LinkedIn')]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<button Guide/>
-[1]<a YouTube Home/>
-DE
-[2]<div />
-[3]<input text;combobox;true;Search;search_query/>
-[4]<button Clear search query/>
-[5]<button Search/>
-[6]<button Search with your voice/>
-[7]<button Create/>
-[8]<button Notifications/>
-[9]<button Account menu/>
-[10]<ytd-mini-guide-entry-renderer tab;Home/>
-[11]<a Home>Home
+0 notifications total
+[0]<a />
+Search by title, skill, or company
+[1]<input Search by title, skill, or company;false;combobox;text/>
+City, state, or zip code
+[2]<input false;combobox;text;City, state, or zip code/>
+[3]<button Search/>
+[4]<a new feed updates notifications
 Home/>
-[12]<ytd-mini-guide-entry-renderer tab;Shorts/>
-[13]<a Shorts>Shorts
-Shorts/>
-[14]<ytd-mini-guide-entry-renderer tab;Subscriptions/>
-[15]<a Subscriptions>Subscriptions
-Subscriptions/>
-[16]<ytd-mini-guide-entry-renderer You;tab/>
-[17]<a You>You
-You/>
-[18]<yt-chip-cloud-chip-renderer tab>All
-All/>
-[19]<yt-chip-cloud-chip-renderer tab>AI
-AI/>
-[20]<yt-chip-cloud-chip-renderer tab>Source code
-Source code/>
-[21]<yt-chip-cloud-chip-renderer tab>Podcasts
-Podcasts/>
-[22]<yt-chip-cloud-chip-renderer tab>Music
-Music/>
-[23]<yt-chip-cloud-chip-renderer tab>Mixes
-Mixes/>
-[24]<yt-chip-cloud-chip-renderer tab>Gaming
-Gaming/>
-[25]<yt-chip-cloud-chip-renderer tab>Sets
-Sets/>
-[26]<yt-chip-cloud-chip-renderer tab>Entrepreneurship
-Entrepreneurship/>
-Real analysis
-[27]<yt-chip-cloud-chip-renderer tab>Thoughts
-Thoughts/>
-[28]<yt-chip-cloud-chip-renderer tab>Laptops
-Laptops/>
-[29]<yt-chip-cloud-chip-renderer tab>Statistics
-Statistics/>
-[30]<yt-chip-cloud-chip-renderer tab>Recently uploaded
-Recently uploaded/>
-[31]<yt-chip-cloud-chip-renderer tab>Watched
-Watched/>
-[32]<button Next/>
-[33]<div Ad – Jetzt zur Ausbildung Betriebliches Gesundheitsmanagement anmelden – 30 seconds – Beim IST die Ausbildung Betriebliches Gesundheitsmanagement machen! – IST-Studieninstitut / IST-Hochschule – play video;button/>
-[34]<a Now playing/>
+[5]<a 1
+1 new network update notification
+My Network/>
+[6]<a Jobs/>
+[7]<a Messaging/>
+[8]<a 24
+24 new notifications
+Notifications/>
+[9]<button false>Me/>
+[10]<img />
+[11]<button false>For Business/>
+[12]<a Try Premium for €0/>
+Jobs search
+[13]<button false; Filter by: Jobs>Jobs/>
+[14]<button false;Date posted filter. Clicking this button displays all Date posted filter options.>Date posted/>
+[15]<button false;Experience level filter. Clicking this button displays all Experience level filter options.>Experience level/>
+[16]<button false;Company filter. Clicking this button displays all Company filter options.>Company/>
+[17]<button false;Remote filter. Clicking this button displays all Remote filter options.>Remote/>
+[18]<button Easy Apply filter.;radio>Easy Apply/>
+[19]<button Show all filters. Clicking this button displays all available filter options.>All filters/>
+software development in Saarbrücken, Saarland, Germany
+4,166 results
+Set alert
+Set job alert for Software development in Saarbrücken, Saarland, Germany
+Jump to active job details
+Jump to active search result
+[20]<img />
+[21]<a Software Engineer Java (all genders) with verification>Software Engineer Java (all genders)
+Software Engineer Java (all genders) with verification/>
+adesso SE
+Saarbrücken, Saarland, Germany (On-site)
+[22]<img />
+22 school alumni work here
+22 Universität des Saarlandes school alumni work here
+Viewed
+Promoted
+Be an early applicant
+[23]<button false;More options/>
+[24]<button Dismiss Software Engineer Java (all genders) job/>
+[25]<img />
+[26]<a (Junior) Bauingenieur:in zur Qualifizierung als Bauüberwacher:in Bahn Oberbau/KIB with verification>(Junior) Bauingenieur:in zur Qualifizierung als Bauüberwacher:in Bahn Oberbau/KIB
+(Junior) Bauingenieur:in zur Qualifizierung als Bauüberwacher:in Bahn Oberbau/KIB with verification/>
+Deutsche Bahn
+Saarbrücken, Saarland, Germany
+[27]<img />
+29 school alumni work here
+29 Universität des Saarlandes school alumni work here
+Promoted
+Be an early applicant
+[28]<button false;More options/>
+[29]<button Dismiss (Junior) Bauingenieur:in zur Qualifizierung als Bauüberwacher:in Bahn Oberbau/KIB job/>
+[30]<img />
+[31]<a Softwareentwickler (m/w/d) with verification>Softwareentwickler (m/w/d)
+Softwareentwickler (m/w/d) with verification/>
+FERCHAU
+Saarbrücken, Saarland, Germany (Hybrid)
+€50K/yr - €65K/yr
+[32]<img />
+8 school alumni work here
+8 Universität des Saarlandes school alumni work here
+Viewed
+Promoted
+Be an early applicant
+[33]<button false;More options/>
+[34]<button Dismiss Softwareentwickler (m/w/d) job/>
 [35]<img />
-[36]<a Go to channel: IST-Studieninstitut / IST-Hochschule.;IST-Studieninstitut / IST-Hochschule/>
-Jetzt zur Ausbildung Betriebliches Gesundheitsmanagement anmelden
-[37]<button />
-Sponsored
-IST-Studieninstitut / IST-Hochschule
-[38]<a Watch/>
-[39]<a Mehr infos/>
-[40]<a 3:50:40
-3:50:40
-Now playing/>
+[36]<a AI Developer (C# .Net, Python, LLM, GPT, Prompt Engineering)>AI Developer (C# .Net, Python, LLM, GPT, Prompt Engineering)
+AI Developer (C# .Net, Python, LLM, GPT, Prompt Engineering)/>
+TrueNorth®
+European Union (Remote)
+Applicant review time is typically 1-2 weeks
+Promoted
+Easy Apply
+[37]<button false;More options/>
+[38]<button Dismiss AI Developer (C# .Net, Python, LLM, GPT, Prompt Engineering) job/>
+[39]<img />
+[40]<a (Senior) Consultant ServiceNow - AI & Data (w/m/d) with verification>(Senior) Consultant ServiceNow - AI & Data (w/m/d)
+(Senior) Consultant ServiceNow - AI & Data (w/m/d) with verification/>
+EY
+Saarbrücken, Saarland, Germany (On-site)
 [41]<img />
-[42]<div button;Go to channel/>
-[43]<a How to Build & Sell AI Agents: Ultimate Beginner’s Guide by Liam Ottley 44,916 views 1 day ago 3 hours, 50 minutes>How to Build & Sell AI Agents: Ultimate Beginner’s Guide/>
-[44]<a Liam Ottley/>
-44K views
-1 day ago
-[45]<button Action menu/>
-Shorts
-[46]<button More actions/>
-[47]<a />
-[48]<img />
-[49]<div 1.6M views/>
-[50]<a Nikhil's Relationship with PVR Stock #shorts/>
-[51]<button More actions/>
-[52]<a />
-[53]<img />
-[54]<div 1.9K views/>
-[55]<a If you don't want to USE AI as a developer you need to watch THIS/>
-[56]<button More actions/>
-[57]<a />
-[58]<img />
-[59]<div 1.6M views/>
-[60]<a Jamie Oliver Mess Up Rice/>
-[61]<button More actions/>
-[62]<a 3:42
-3:42
-Now playing/>
-[63]<button Action menu/>
-[64]<a 8:30
-8:30
-Now playing/>
-[65]<button Action menu/>
-... 11924 pixels below - scroll or extract content to see more ...
-Current step: 4/100Current date and time: 2025-03-29 04:07
+79 school alumni work here
+79 Universität des Saarlandes school alumni work here
+Promoted
+Be an early applicant
+[42]<button false;More options/>
+[43]<button Dismiss (Senior) Consultant ServiceNow - AI & Data (w/m/d) job/>
+[44]<img />
+[45]<a Artificial Intelligence Engineer>Artificial Intelligence Engineer
+Artificial Intelligence Engineer/>
+Sensay
+EMEA (Remote)
+6 hours ago
+Within the past 24 hours
+Easy Apply
+[46]<button Dismiss Artificial Intelligence Engineer job/>
+[47]<img />
+[48]<a AI / ML Engineer with verification>AI / ML Engineer
+AI / ML Engineer with verification/>
+Penta Consulting
+European Union (Remote)
+Response time is typically 4 days
+Promoted
+Easy Apply
+[49]<button false;More options/>
+[50]<button Dismiss AI / ML Engineer job/>
+[51]<a adesso SE logo/>
+[52]<img />
+[53]<a adesso SE/>
+[54]<button false>Share/>
+[55]<button false>Show more options/>
+[56]<a Software Engineer Java (all genders)/>
+[57]<button View verified hiring modal/>
+Saarbrücken, Saarland, Germany
+·
+Reposted
+1 week ago
+·
+21 people clicked apply
+[58]<button />
+[59]<div presentation>On-site
+Matches your job preferences, workplace type is On-site./>
+[60]<div presentation>Full-time
+Matches your job preferences, job type is Full-time./>
+[61]<div presentation>1 of 10 skills match: Programming
+1 of 10 required skills are found on your profile/>
+[62]<button link;Apply to Software Engineer Java (all genders) on company website>Apply/>
+[63]<button Save
+Save Software Engineer Java (all genders)   at adesso SE/>
+How your profile and resume fit this job
+Get AI-powered advice on this job and more exclusive features with Premium.
+Try Premium for €0
+[64]<button />
+[65]<button Tailor my resume to this job/>
+[66]<button Am I a good fit for this job?/>
+How can I best position myself for this job?
+[67]<button Scroll right/>
+People you can reach out to
+[68]<img />
+Universität des Saarlandes logo
+School alumni from Universität des Saarlandes
+[69]<button Show all/>
+Meet the hiring team
+[70]<a View Sascha Vesquet’s verified profile graphic/>
+[71]<img />
+[72]<a View Sascha Vesquet’s verified profile>Sascha Vesquet/>
+3rd
+business. people. technology.
+[73]<button Message/>
+About the job
+Wir gehören zu den Top-Adressen in der IT-Welt und fokussieren uns auf die Optimierung der Kerngeschäftsprozesse unserer Kunden. Durch den smarten Einsatz maßgeschneiderter IT-Lösungen unterstützen wir unsere Kunden dabei, das Beste aus ihrem Business und aktuellen Technologien herauszuholen. Unseren Erfolg aber erreichen wir nur durch eins: die Menschen bei adesso! Sie bringen Ideen, fachliches Know how und Technologien zusammen. Gemeinsam programmieren wir (deine) Zukunft bei adesso.
+DEINE ROLLE
+Kundenprojekte gestalten: Du arbeitest an abwechslungsreichen Softwareprojekten und begleitest sie von der Idee bis zur Umsetzung.
+Anforderungen analysieren: Du erweiterst kundenspezifische Anforderungen fachlich und technisch.
+Agile Methoden nutzen: Du setzt moderne Entwicklungsmethoden ein und programmierst mit aktuellen Technologien im Java-Umfeld.
+Teamarbeit fördern: Du arbeitest in interdisziplinären Projektteams an abwechslungsreichen Tätigkeiten.
+Qualität sichern: Du übernimmst Aufgaben von der Programmierung bis zur Qualitätssicherung.
+Wissen aufbauen: Du entwickelst dich fachlich und technisch weiter, während du von Beginn an Verantwortung übernimmst.
+DEIN PROFIL
+Ausbildung: Ein abgeschlossenes Studium oder eine Ausbildung im IT-Bereich bildet deine Basis für diese Rolle.
+Java-Know-how: Du hast Erfahrung in der Java-Entwicklung, auch mit Frameworks wie Spring Boot oder Hibernate.
+[74]<img />
+Status is online
+[75]<button Messaging
+You are on the messaging overlay. Press enter to minimize it./>
+[76]<button false/>
+[77]<button Compose message/>
+[78]<button You are on the messaging overlay. Press enter to minimize it./>
+Type to search for connections and conversations.
+[79]<input Search messages;text/>
+[80]<button false/>
+Attention screen reader users, messaging items continuously update. Please use the tab and shift + tab keys instead of your up and down arrow keys to navigate between messaging items.
+[81]<div Status is online
+Mahmoud El-Nezely
+Apr 7
+Mahmoud: yoo ghulam/>
+[82]<button false>Open the options list in your conversation with Mahmoud El-Nezely and Usman Khan/>
+[83]<div Alibaba Cloud Global
+Mar 31
+Sponsored
+Imagine building an AI model faster than making coffee — 5 minutes is all it takes! With Alibaba Cloud’s 2025 Generative AI Solution Whitepaper, the future of AI democratization is now within reach.
+🚀 Why You Need This Whitepaper:Qwen2.5 Unleashed: Achieve 15% higher accuracy in NLP tasks with our latest multimodal breakthrough.One-Click Magic: Deploy GPU clusters optimized for Qwen2.5’s architecture—no coding required, in minutes.Proven Impact: A logistics giant cut training costs by 45% using Qwen2.5 + DeepSeek’s auto-scaling.Don’t let this opportunity pass you by!
+Register Today to unlock the full document and take the first step towards your AI capabilities!
+1
+1 new notification/>
+[84]<button false>Open the options list in your conversation with Alibaba Cloud Global/>
+[85]<div Status is online
+Ahmad Zharif Zaharil, AMIChemE
+Mar 27
+Ahmad Zharif: Hi Usman! I’m Zharif – we recently launched CoffeeSpace, a Hinge-like cofounder matching app & just hit 10,000 users (+ featured on TechCrunch)!
+
+If you’re looking/exploring ideas, we'd love for you to try it out: https://coffeespace.onelink.me/aOZM/link (ref code: LINKEDQ1, exp Mar 31)/>
+[86]<button false>Open the options list in your conversation with Ahmad Zharif Zaharil, AMIChemE and Usman Khan/>
+[87]<div Jacob Wylie
+Mar 26
+You: Hi Jacob, thank you for reaching out. I would like to learn more about this opportunity.
+I have 2 friends as well who would like to join/>
+[88]<button false>Open the options list in your conversation with Jacob Wylie and Usman Khan/>
+[89]<div Status is reachable
+Mohammed Halboup
+Mar 23
+Mohammed sent a post/>
+[90]<button false>Open the options list in your conversation with Usman Khan and Mohammed Halboup/>
+[91]<div LinkedIn
+Mar 21
+LinkedIn Offer
+Hi there, Usman!
+We’ve recently seen an increase in job postings that might be a good fit. Would you like to try Premium for free to learn more about these opportunities?/>
+[92]<button false>Open the options list in your conversation with LinkedIn/>
+[93]<div Immigration, Refugees and Citizenship Canada / Immigration, Réfugiés et Citoyenneté Canada
+Mar 11
+Sponsored
+Your skills are in demand in Canada./>
+[94]<button false>Open the options list in your conversation with Immigration, Refugees and Citizenship Canada / Immigration, Réfugiés et Citoyenneté Canada/>
+[95]<div Status is offline
+SM Mushtaq Bokhari
+Feb 3
+You: ohhhhhhhhhhhh suiiiiiiiiiiiiiiiiiiiii/>
+[96]<button false>Open the options list in your conversation with SM Mushtaq Bokhari and Usman Khan/>
+[97]<div Status is offline
+Manuel Kania
+Feb 2
+Manuel: No fixed date yet./>
+[98]<button false>Open the options list in your conversation with Manuel Kania and Usman Khan/>
+[99]<input checkbox/>
+Synera
+Jan 23
+[100]<button false>Open the options list in your conversation with {0} and Usman Khan/>
+Synera: Hello Usman,
+
+thanks for your message. Can you please apply on this page and send us your CV: https://www.synera.io/careers#job-473687
+
+Thanks
+[101]<div University of Malaya
+Oct 21, 2024
+You: Dear Sir/Madam
+
+I am Usman Khan, Student ID:  23089904  , EMGS application number:  E701180588  .
+Unfortunately and due to personal circumstances I can’t pursue my studies in University of Malaya and in Malaysia. I contacted EMGS in order to cancel my application visa which is currently on 35% and they asked me that I should send an email to the visa office of my institute to cancel it. Can you please help me cancel my visa application as soon as possible if you need any further information, please let me know.
+
+I mailed this 3 weeks ago but no response please respond
+
+RegardsUsman Khan/>
+[102]<img />
+[103]<input checkbox/>
+[104]<button false>Open the options list in your conversation with {0} and Usman Khan/>
+[105]<div Status is offline
+Vaasu Changotra
+Jul 16, 2024
+You: Ohh np anyways Thank you very much/>
+[106]<img />
+[107]<input checkbox/>
+[108]<button false>Open the options list in your conversation with Vaasu Changotra and Usman Khan/>
+[109]<div Status is offline
+Juled Zaganjori
+Jul 8, 2024
+You: Okay, thanks/>
+[110]<img />
+[111]<input checkbox/>
+[112]<button false>Open the options list in your conversation with Juled Zaganjori and Usman Khan/>
+[113]<div Status is reachable
+Litha Schutte
+Jul 7, 2024
+You: oh ok thanks a lot , can't thank you enough for this help/>
+[114]<img />
+[115]<input checkbox/>
+[116]<button false>Open the options list in your conversation with Litha Schutte and Usman Khan/>
+[117]<div Status is offline
+Delian Brahushi
+Jul 6, 2024
+You: What does Exmatriculate mean ?/>
+[118]<img />
+[119]<input checkbox/>
+[120]<button false>Open the options list in your conversation with Delian Brahushi and Usman Khan/>
+[121]<div Status is reachable
+Amit Saxena
+Jun 26, 2024
+Amit: 👍/>
+[122]<img />
+[123]<input checkbox/>
+[124]<button false>Open the options list in your conversation with Amit Saxena and Usman Khan/>
+[125]<div Alberto Martin Lionardi
+Jun 23, 2024
+Alberto Martin: No problem/>
+[126]<img />
+[127]<input checkbox/>
+[128]<button false>Open the options list in your conversation with Alberto Martin Lionardi and Usman Khan/>
+[129]<header Alibaba Cloud Global/>
+[130]<img />
+[131]<button Close your conversation with {0} and Usman Khan/>
+sent the following messages at 2:43 PM
+Alibaba Cloud Global
+[132]<a Alibaba Cloud Global/>
+2:43 PM
+Imagine building an AI model faster than making coffee — 5 minutes is all it takes! With Alibaba Cloud’s 2025 Generative AI Solution Whitepaper, the future of AI democratization is now within reach.
+🚀 Why You Need This Whitepaper:
+Qwen2.5 Unleashed
+: Achieve 15% higher accuracy in NLP tasks with our latest multimodal breakthrough.
+One-Click Magic
+: Deploy GPU clusters optimized for Qwen2.5’s architecture—no coding required, in minutes.
+Proven Impact
+: A logistics giant cut training costs by 45% using Qwen2.5 + DeepSeek’s auto-scaling.
+Don’t let this opportunity pass you by!
+Register Today to unlock the full document and take the first step towards your AI capabilities!
+[133]<button Download the Whitepaper/>
+[End of page]
+Current step: 4/100Current date and time: 2025-04-08 19:13
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - I have clicked the search button and the results are displayed.",
-    "memory": "Starting the task: Go to youtube and search for 'python programming'.",
-    "next_goal": "Complete the task."
+    "evaluation_previous_goal": "Success - Extracted job description",
+    "memory": "Starting with the new task. I have completed 3/10 steps",
+    "next_goal": "Complete the task and print the job description"
   },
   "action": [
     {
       "done": {
-        "text": "I have successfully searched for 'python programming' on youtube.",
+        "text": "I have found a job description for a Software Engineer Java position at adesso SE in Saarbr\u00fccken, Germany. The job description is as follows:\n\nWir geh\u00f6ren zu den Top-Adressen in der IT-Welt und fokussieren uns auf die Optimierung der Kerngesch\u00e4ftsprozesse unserer Kunden. Durch den smarten Einsatz ma\u00dfgeschneiderter IT-L\u00f6sungen unterst\u00fctzen wir unsere Kunden dabei, das Beste aus ihrem Business und aktuellen Technologien herauszuholen. Unseren Erfolg aber erreichen wir nur durch eins: die Menschen bei adesso! Sie bringen Ideen, fachliches Know how und Technologien zusammen. Gemeinsam programmieren wir (deine) Zukunft bei adesso.\n\n**DEINE ROLLE**\n\n*   Kundenprojekte gestalten: Du arbeitest an abwechslungsreichen Softwareprojekten und begleitest sie von der Idee bis zur Umsetzung.\n*   Anforderungen analysieren: Du erweiterst kundenspezifische Anforderungen fachlich und technisch.\n*   Agile Methoden nutzen: Du setzt moderne Entwicklungsmethoden ein und programmierst mit aktuellen Technologien im Java-Umfeld.\n*   Teamarbeit f\u00f6rdern: Du arbeitest in interdisziplin\u00e4ren Projektteams an abwechslungsreichen T\u00e4tigkeiten.\n*   Qualit\u00e4t sichern: Du \u00fcbernimmst Aufgaben von der Programmierung bis zur Qualit\u00e4tssicherung.\n*   Wissen aufbauen: Du entwickelst dich fachlich und technisch weiter, w\u00e4hrend du von Beginn an Verantwortung \u00fcbernimmst.\n**DEIN PROFIL**\n\n*   Ausbildung: Ein abgeschlossenes Studium oder eine Ausbildung im IT-Bereich bildet deine Basis f\u00fcr diese Rolle.\n*   Java-Know-how: Du hast Erfahrung in der Java-Entwicklung, auch mit Frameworks wie Spring Boot oder Hibernate.\n*   Lernfreude: Du punktest mit gro\u00dfer Lernfreude und Bereitschaft, neue Themen zu entdecken.\n*   Teamgeist: Du bist kommunikativ, hilfsbereit und bringst eine positive Haltung in deine Projekte ein.\n*   Sprachkenntnisse: Deine sehr guten Deutsch- sowie gute Englischkenntnisse erm\u00f6glichen dir eine sichere Kommunikation.\nUnser Versprechen: Du wirst dich bei uns wohlf\u00fchlen! Kollegial, famili\u00e4r und auf Augenh\u00f6he \u2013 wir leben Austausch, Teamgeist und einen respektvollen Umgang miteinander. Diversit\u00e4t und verschiedene Blickwinkel werden bei uns genauso gesch\u00e4tzt wie du als Mensch. Das und viel mehr steht f\u00fcr unser ganz besonderes Wir-Gef\u00fchl. F\u00fcr das es sogar ein Wort gibt: adessi.\n\nUnsere Kultur und das Zusammenarbeiten sind gepr\u00e4gt von gegenseitiger Wertsch\u00e4tzung, Anerkennung und Unterst\u00fctzung. Das verbindet uns hierarchie\u00fcbergreifend \u2013 auch im Home-Office. So belegen wir zum wiederholten Mal den 1. Platz beim Wettbewerb \u201eDeutschlands Beste Arbeitgeber in der ITK\u201c!. Unser umfangreiches Trainingsangebot und ein transparentes Laufbahnstufenmodell f\u00fcr alle sorgen daf\u00fcr, dass deine Entwicklung bei uns nicht stillsteht. Denn gemeinsam zu wachsen und Chancengeber zu sein, das ist programmiert in unserer DNA.",
         "success": true
       }
     }

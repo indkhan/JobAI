@@ -70,7 +70,7 @@ Common action sequences:
 Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """go to youtube and search for 'python programming'""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """Find a job on linkedin and search for job related to Software development and print the job description""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -84,6 +84,9 @@ Browser started
  HumanMessage 
 [Your task history memory starts here]
 
+ HumanMessage 
+Action result: 🔗  Opened new tab with https://www.linkedin.com/jobs/
+
  AIMessage 
 
 
@@ -91,155 +94,204 @@ Browser started
 
 
  HumanMessage 
-Action result: 🔗  Navigated to https://www.youtube.com/
-
- AIMessage 
-
-
- ToolMessage 
-
-
- HumanMessage 
-Action result: ⌨️  Input python programming into index 3
+Action result: ⌨️  Input Software development into index 1
 
  HumanMessage 
 Action result: Something new appeared after action 1 / 2
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🖱️  Clicked button with index 4: software development
 
  HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: https://www.youtube.com/
+Current url: https://www.linkedin.com/jobs/search/?currentJobId=3733048026&geoId=105002202&keywords=software%20development&origin=JOBS_HOME_KEYWORD_AUTOCOMPLETE&refresh=true
 Available tabs:
-[TabInfo(page_id=0, url='https://www.youtube.com/', title='YouTube')]
+[TabInfo(page_id=0, url='https://mail.google.com/mail/u/0/#inbox', title='Inbox (1) - mgsukhan@gmail.com - Gmail'), TabInfo(page_id=1, url='https://discord.com/channels/1303749220842340412/1305549200678850642', title='(225) Discord | #showcase-your-work | Browser Use'), TabInfo(page_id=2, url='https://docs.browser-use.com/customize/supported-models', title='Supported Models - Browser Use'), TabInfo(page_id=3, url='https://www.linkedin.com/jobs/', title='(25) Jobs | LinkedIn'), TabInfo(page_id=4, url='https://cms.sic.saarland/sysarch25/materials', title='Materials'), TabInfo(page_id=5, url='https://www.linkedin.com/jobs/search/?currentJobId=3733048026&geoId=105002202&keywords=software%20development&origin=JOBS_HOME_KEYWORD_AUTOCOMPLETE&refresh=true', title='(25) software development Jobs | LinkedIn')]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<button Guide/>
-[1]<a YouTube Home/>
-DE
-[2]<div />
-[3]<input text;combobox;true;Search;search_query/>
-[4]<button Clear search query/>
-[5]<button Search/>
-[6]<div listbox/>
-[7]<div option>python programming/>
-[8]<div option;python programming for beginners>python programming
-for beginners/>
-[9]<div option;python programming full course>python programming
-full course/>
-[10]<div option;python programming language>python programming
-language/>
-[11]<div option;python programming course>python programming
-course/>
-[12]<div option;python programming interview questions>python programming
-interview questions/>
-[13]<div option;python programming with mash>python programming
-with mash/>
-[14]<div option;python programming full course in english>python programming
-full course in english/>
-[15]<div option;python programming for machine learning>python programming
-for machine learning/>
-[16]<div option;python programming for raspberry pi>python programming
-for raspberry pi/>
-[17]<div option;python programming btech 2nd year aktu>python programming
-btech 2nd year aktu/>
-[18]<div option;python programming basic to advanced>python programming
-basic to advanced/>
-[19]<div option;python programming projects for beginners>python programming
-projects for beginners/>
-[20]<div option;python programming tutorial>python programming
-tutorial/>
-[21]<button Report search predictions/>
-[22]<button Search with your voice/>
-[23]<button Create/>
-[24]<button Notifications/>
-[25]<button Account menu/>
-[26]<ytd-mini-guide-entry-renderer tab;Home/>
-[27]<a Home>Home
+0 notifications total
+[0]<a />
+[1]<input false;combobox;Search;text/>
+[2]<a new feed updates notifications
 Home/>
-[28]<ytd-mini-guide-entry-renderer tab;Shorts/>
-[29]<a Shorts>Shorts
-Shorts/>
-[30]<ytd-mini-guide-entry-renderer tab;Subscriptions/>
-[31]<a Subscriptions>Subscriptions
-Subscriptions/>
-[32]<ytd-mini-guide-entry-renderer You;tab/>
-[33]<a You>You
-You/>
-[34]<yt-chip-cloud-chip-renderer tab>All
-All/>
-[35]<yt-chip-cloud-chip-renderer tab>AI
-AI/>
-Source code
-Podcasts
-Music
-Mixes
-Gaming
-[36]<yt-chip-cloud-chip-renderer tab>Sets
-Sets/>
-[37]<yt-chip-cloud-chip-renderer tab>Entrepreneurship
-Entrepreneurship/>
-Real analysis
-[38]<yt-chip-cloud-chip-renderer tab>Thoughts
-Thoughts/>
-[39]<yt-chip-cloud-chip-renderer tab>Laptops
-Laptops/>
-[40]<yt-chip-cloud-chip-renderer tab>Statistics
-Statistics/>
-[41]<yt-chip-cloud-chip-renderer tab>Recently uploaded
-Recently uploaded/>
-[42]<yt-chip-cloud-chip-renderer tab>Watched
-Watched/>
-[43]<button Next/>
-3:50:40
-[44]<div button;Go to channel/>
-How to Build & Sell AI Agents: Ultimate Beginner’s Guide
-[45]<a Liam Ottley/>
-44K views
-1 day ago
-Shorts
-[46]<button More actions/>
-[47]<a />
-[48]<img />
-[49]<div 1.6M views/>
-[50]<a Nikhil's Relationship with PVR Stock #shorts/>
-[51]<button More actions/>
-[52]<a />
-[53]<img />
-[54]<div 1.9K views/>
-[55]<a If you don't want to USE AI as a developer you need to watch THIS/>
-[56]<button More actions/>
-[57]<a />
-[58]<img />
-[59]<div 1.6M views/>
-[60]<a Jamie Oliver Mess Up Rice/>
-[61]<button More actions/>
-[62]<a 3:42
-3:42
-Now playing/>
-[63]<div button;Go to channel/>
-[64]<a START Summit X Hack Closing by START Global 444 views 3 years ago 3 minutes, 42 seconds>START Summit X Hack Closing/>
-[65]<button Action menu/>
-[66]<a 8:30
-8:30
-Now playing/>
-[67]<div button;Go to channel/>
-[68]<a 6 - MCP Marketplace: 3,000+ Free Open-Source MCP servers 🔥 by AI Anytime 555 views 17 hours ago 8 minutes, 30 seconds>6 - MCP Marketplace: 3,000+ Free Open-Source MCP servers 🔥/>
-[69]<button Action menu/>
-... 5509 pixels below - scroll or extract content to see more ...
-Current step: 3/100Current date and time: 2025-03-29 04:07
+[3]<a 1
+1 new network update notification
+My Network/>
+[4]<a Jobs/>
+[5]<a Messaging/>
+[6]<a 24
+24 new notifications
+Notifications/>
+[7]<button false>Me/>
+[8]<img />
+[9]<button false>For Business/>
+[10]<a Try Premium for €0/>
+[11]<img />
+Status is online
+[12]<button Messaging
+You are on the messaging overlay. Press enter to minimize it./>
+[13]<button false/>
+[14]<button Compose message/>
+[15]<button You are on the messaging overlay. Press enter to minimize it./>
+Type to search for connections and conversations.
+[16]<input Search messages;text/>
+[17]<button false/>
+Attention screen reader users, messaging items continuously update. Please use the tab and shift + tab keys instead of your up and down arrow keys to navigate between messaging items.
+[18]<div Status is online
+Mahmoud El-Nezely
+Apr 7
+Mahmoud: yoo ghulam/>
+[19]<button false>Open the options list in your conversation with Mahmoud El-Nezely and Usman Khan/>
+[20]<div Alibaba Cloud Global
+Mar 31
+Sponsored
+Imagine building an AI model faster than making coffee — 5 minutes is all it takes! With Alibaba Cloud’s 2025 Generative AI Solution Whitepaper, the future of AI democratization is now within reach.
+🚀 Why You Need This Whitepaper:Qwen2.5 Unleashed: Achieve 15% higher accuracy in NLP tasks with our latest multimodal breakthrough.One-Click Magic: Deploy GPU clusters optimized for Qwen2.5’s architecture—no coding required, in minutes.Proven Impact: A logistics giant cut training costs by 45% using Qwen2.5 + DeepSeek’s auto-scaling.Don’t let this opportunity pass you by!
+Register Today to unlock the full document and take the first step towards your AI capabilities!
+1
+1 new notification/>
+[21]<button false>Open the options list in your conversation with Alibaba Cloud Global/>
+[22]<div Status is online
+Ahmad Zharif Zaharil, AMIChemE
+Mar 27
+Ahmad Zharif: Hi Usman! I’m Zharif – we recently launched CoffeeSpace, a Hinge-like cofounder matching app & just hit 10,000 users (+ featured on TechCrunch)!
+
+If you’re looking/exploring ideas, we'd love for you to try it out: https://coffeespace.onelink.me/aOZM/link (ref code: LINKEDQ1, exp Mar 31)/>
+[23]<button false>Open the options list in your conversation with Ahmad Zharif Zaharil, AMIChemE and Usman Khan/>
+[24]<div Jacob Wylie
+Mar 26
+You: Hi Jacob, thank you for reaching out. I would like to learn more about this opportunity.
+I have 2 friends as well who would like to join/>
+[25]<button false>Open the options list in your conversation with Jacob Wylie and Usman Khan/>
+[26]<div Status is reachable
+Mohammed Halboup
+Mar 23
+Mohammed sent a post/>
+[27]<button false>Open the options list in your conversation with Usman Khan and Mohammed Halboup/>
+[28]<div LinkedIn
+Mar 21
+LinkedIn Offer
+Hi there, Usman!
+We’ve recently seen an increase in job postings that might be a good fit. Would you like to try Premium for free to learn more about these opportunities?/>
+[29]<button false>Open the options list in your conversation with LinkedIn/>
+[30]<div Immigration, Refugees and Citizenship Canada / Immigration, Réfugiés et Citoyenneté Canada
+Mar 11
+Sponsored
+Your skills are in demand in Canada./>
+[31]<button false>Open the options list in your conversation with Immigration, Refugees and Citizenship Canada / Immigration, Réfugiés et Citoyenneté Canada/>
+[32]<div Status is offline
+SM Mushtaq Bokhari
+Feb 3
+You: ohhhhhhhhhhhh suiiiiiiiiiiiiiiiiiiiii/>
+[33]<button false>Open the options list in your conversation with SM Mushtaq Bokhari and Usman Khan/>
+[34]<div Status is offline
+Manuel Kania
+Feb 2
+Manuel: No fixed date yet./>
+[35]<button false>Open the options list in your conversation with Manuel Kania and Usman Khan/>
+[36]<input checkbox/>
+Synera
+Jan 23
+[37]<button false>Open the options list in your conversation with {0} and Usman Khan/>
+Synera: Hello Usman,
+
+thanks for your message. Can you please apply on this page and send us your CV: https://www.synera.io/careers#job-473687
+
+Thanks
+[38]<div University of Malaya
+Oct 21, 2024
+You: Dear Sir/Madam
+
+I am Usman Khan, Student ID:  23089904  , EMGS application number:  E701180588  .
+Unfortunately and due to personal circumstances I can’t pursue my studies in University of Malaya and in Malaysia. I contacted EMGS in order to cancel my application visa which is currently on 35% and they asked me that I should send an email to the visa office of my institute to cancel it. Can you please help me cancel my visa application as soon as possible if you need any further information, please let me know.
+
+I mailed this 3 weeks ago but no response please respond
+
+RegardsUsman Khan/>
+[39]<img />
+[40]<input checkbox/>
+[41]<button false>Open the options list in your conversation with {0} and Usman Khan/>
+[42]<div Status is offline
+Vaasu Changotra
+Jul 16, 2024
+You: Ohh np anyways Thank you very much/>
+[43]<img />
+[44]<input checkbox/>
+[45]<button false>Open the options list in your conversation with Vaasu Changotra and Usman Khan/>
+[46]<div Status is offline
+Juled Zaganjori
+Jul 8, 2024
+You: Okay, thanks/>
+[47]<img />
+[48]<input checkbox/>
+[49]<button false>Open the options list in your conversation with Juled Zaganjori and Usman Khan/>
+[50]<div Status is reachable
+Litha Schutte
+Jul 7, 2024
+You: oh ok thanks a lot , can't thank you enough for this help/>
+[51]<img />
+[52]<input checkbox/>
+[53]<button false>Open the options list in your conversation with Litha Schutte and Usman Khan/>
+[54]<div Status is offline
+Delian Brahushi
+Jul 6, 2024
+You: What does Exmatriculate mean ?/>
+[55]<img />
+[56]<input checkbox/>
+[57]<button false>Open the options list in your conversation with Delian Brahushi and Usman Khan/>
+[58]<div Status is reachable
+Amit Saxena
+Jun 26, 2024
+Amit: 👍/>
+[59]<img />
+[60]<input checkbox/>
+[61]<button false>Open the options list in your conversation with Amit Saxena and Usman Khan/>
+[62]<div Alberto Martin Lionardi
+Jun 23, 2024
+Alberto Martin: No problem/>
+[63]<img />
+[64]<input checkbox/>
+[65]<button false>Open the options list in your conversation with Alberto Martin Lionardi and Usman Khan/>
+[66]<header Alibaba Cloud Global/>
+[67]<img />
+[68]<button Close your conversation with {0} and Usman Khan/>
+sent the following messages at 2:43 PM
+Alibaba Cloud Global
+[69]<a Alibaba Cloud Global/>
+2:43 PM
+Imagine building an AI model faster than making coffee — 5 minutes is all it takes! With Alibaba Cloud’s 2025 Generative AI Solution Whitepaper, the future of AI democratization is now within reach.
+🚀 Why You Need This Whitepaper:
+Qwen2.5 Unleashed
+: Achieve 15% higher accuracy in NLP tasks with our latest multimodal breakthrough.
+One-Click Magic
+: Deploy GPU clusters optimized for Qwen2.5’s architecture—no coding required, in minutes.
+Proven Impact
+: A logistics giant cut training costs by 45% using Qwen2.5 + DeepSeek’s auto-scaling.
+Don’t let this opportunity pass you by!
+Register Today to unlock the full document and take the first step towards your AI capabilities!
+[70]<button Download the Whitepaper/>
+[End of page]
+Current step: 3/100Current date and time: 2025-04-08 19:13
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Failed - After inputting the text, the page changed and the search button needs to be clicked again.",
-    "memory": "Starting the task: Go to youtube and search for 'python programming'.",
-    "next_goal": "Click the search button."
+    "evaluation_previous_goal": "Success - Searched for software development jobs",
+    "memory": "Starting with the new task. I have completed 2/10 steps",
+    "next_goal": "Print the job description"
   },
   "action": [
     {
-      "click_element": {
-        "index": 5
+      "extract_content": {
+        "goal": "Extract job description"
       }
     }
   ]

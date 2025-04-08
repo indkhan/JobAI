@@ -70,7 +70,7 @@ Common action sequences:
 Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """go to youtube and search for 'python programming'""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """Find a job on linkedin and search for job related to Software development and print the job description""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -85,62 +85,264 @@ Browser started
 [Your task history memory starts here]
 
  HumanMessage 
+Action result: 🔗  Opened new tab with https://www.linkedin.com/jobs/
+
+ HumanMessage 
 [Task history memory ends]
 [Current state starts here]
 The following is one-time information - if you need to remember it write it to memory:
-Current url: chrome://new-tab-page/
+Current url: https://www.linkedin.com/jobs/
 Available tabs:
-[TabInfo(page_id=0, url='chrome://new-tab-page/', title='New Tab')]
+[TabInfo(page_id=0, url='https://mail.google.com/mail/u/0/#inbox', title='Inbox (1) - mgsukhan@gmail.com - Gmail'), TabInfo(page_id=1, url='https://discord.com/channels/1303749220842340412/1305549200678850642', title='(225) Discord | #showcase-your-work | Browser Use'), TabInfo(page_id=2, url='https://docs.browser-use.com/customize/supported-models', title='Supported Models - Browser Use'), TabInfo(page_id=3, url='https://www.linkedin.com/jobs/', title='(25) Jobs | LinkedIn'), TabInfo(page_id=4, url='https://cms.sic.saarland/sysarch25/materials', title='Materials'), TabInfo(page_id=5, url='https://www.linkedin.com/jobs/', title='(25) Jobs | LinkedIn')]
 Interactive elements from top layer of the current page inside the viewport:
 [Start of page]
-[0]<input combobox;Search Google or type a URL;search;false/>
-[1]<button Search by voice/>
-[2]<button Search by image/>
-[3]<div Webmail HIZ/>
-[4]<a Webmail HIZ/>
-[5]<cr-icon-button button;More actions for Webmail HIZ shortcut/>
-[6]<div Course Overview/>
-[7]<a Course Overview/>
-[8]<cr-icon-button More actions for Course Overview shortcut;button/>
-[9]<div Inbox/>
-[10]<a Inbox/>
-[11]<cr-icon-button button;More actions for Inbox shortcut/>
-[12]<div YouTube/>
-[13]<a YouTube/>
-[14]<cr-icon-button More actions for YouTube shortcut;button/>
-[15]<div GitHub/>
-[16]<a GitHub/>
-[17]<cr-icon-button More actions for GitHub shortcut;button/>
-[18]<div ChatGPT/>
-[19]<a ChatGPT/>
-[20]<cr-icon-button button;More actions for ChatGPT shortcut/>
-[21]<div LinkedIn/>
-[22]<a LinkedIn/>
-[23]<cr-icon-button button;More actions for LinkedIn shortcut/>
-[24]<div bolt.new/~/sb1-mkivqtaa/>
-[25]<a bolt.new/~/sb1-mkivqtaa/>
-[26]<cr-icon-button More actions for bolt.new/~/sb1-mkivqtaa shortcut;button/>
-[27]<div Universität des Saarlandes/>
-[28]<a Universität des Saarlandes/>
-[29]<cr-icon-button More actions for Universität des Saarlandes shortcut;button/>
-[30]<cr-button Add shortcut;button/>
-[31]<a 箏 (Kite)
-Artwork by Eve Liu/>
-[32]<cr-button Customise this page;button/>
-[End of page]
-Current step: 1/100Current date and time: 2025-03-29 04:07
+0 notifications total
+[0]<a />
+Search by title, skill, or company
+[1]<input Search by title, skill, or company;false;combobox;text/>
+City, state, or zip code
+[2]<input false;combobox;text;City, state, or zip code/>
+[3]<a new feed updates notifications
+Home/>
+[4]<a 1
+1 new network update notification
+My Network/>
+[5]<a Jobs/>
+[6]<a Messaging/>
+[7]<a 24
+24 new notifications
+Notifications/>
+[8]<button false>Me/>
+[9]<img />
+[10]<button false>For Business/>
+[11]<a Try Premium for €0/>
+Jobs
+[12]<a Background photo of Usman Khan />
+[13]<a />
+[14]<img />
+[15]<a Usman Khan
+Deep Learning | Generative AI | Machine Learning Engineer
+Saarbrücken, Saarland/>
+[16]<a Universität des Saarlandes/>
+[17]<img />
+[18]<a button>Preferences/>
+[19]<a link>My jobs/>
+[20]<a link>My Career Insights/>
+[21]<a link>Post a free job/>
+[22]<a About/>
+[23]<a Accessibility/>
+[24]<a Help Center/>
+[25]<button false>Privacy & Terms/>
+[26]<a Ad Choices/>
+[27]<a Advertising/>
+[28]<button false>Business Services/>
+[29]<button Get the LinkedIn app/>
+[30]<button More options>More/>
+LinkedIn Corporation © 2025
+Top job picks for you
+Based on your profile, preferences, and activity like applies, searches, and saves
+[31]<a Data Space Engineer (all genders)
+Data Space Engineer (all genders) with verification
+adesso SE · Saarbrücken, Saarland, Germany (On-site)
+22 school alumni work here
+22 Universität des Saarlandes school alumni work here
+Viewed
+Promoted
+Be an early applicant/>
+[32]<img />
+[33]<img />
+[34]<button false;More options/>
+[35]<button Dismiss Data Space Engineer (all genders) job/>
+[36]<a Duales Studium (DHBW) - Data Science und künstliche Intelligenz (m/w/d) 2025
+Duales Studium (DHBW) - Data Science und künstliche Intelligenz (m/w/d) 2025 with verification
+Schaeffler · Herzogenaurach, Bavaria, Germany
+18 school alumni work here
+18 Universität des Saarlandes school alumni work here
+Viewed
+Promoted/>
+[37]<img />
+[38]<img />
+[39]<button false;More options/>
+[40]<button Dismiss Duales Studium (DHBW) - Data Science und künstliche Intelligenz (m/w/d) 2025 job/>
+[41]<a Praktikant / Werkstudent Audit Analytics - Junior Softwareentwicklung (m/w/d)
+Praktikant / Werkstudent Audit Analytics - Junior Softwareentwicklung (m/w/d) with verification
+Deloitte · Frankfurt am Main, Hesse, Germany
+65 school alumni work here
+65 Universität des Saarlandes school alumni work here
+Promoted/>
+[42]<img />
+[43]<img />
+[44]<button false;More options/>
+[45]<button Dismiss Praktikant / Werkstudent Audit Analytics - Junior Softwareentwicklung (m/w/d) job/>
+[46]<a Show all Top job picks for you>Show all/>
+Verify to stand out in your job search
+Verify to stand out in your job search
+Verified members get 60% more profile views on average.
+Verified members get 60% more profile views on average.
+[47]<button Verify now/>
+[48]<button Dismiss next best action card/>
+Recent job searches
+[49]<button Clear your search history>Clear/>
+[50]<a Go Developer
+Saarbrücken, Saarland, Germany/>
+[51]<a Java Developer
+Saarbrücken, Saarland, Germany/>
+[52]<a Python Developer
+Saarbrücken, Saarland, Germany/>
+[53]<a Rust Developer
+Saarbrücken, Saarland, Germany/>
+[54]<a Golang Developer
+Saarbrücken, Saarland, Germany/>
+[55]<a Golang
+Saarbrücken, Saarland, Germany/>
+[56]<button Show more {:title}>Show more/>
+[57]<img />
+Usman’s profile image
+See the full list of jobs where you’d be a top applicant
+[58]<img />
+[59]<img />
+[60]<img />
+Ahmad Zharif and millions of other members use Premium
+[61]<a Try Premium for €0/>
+1-month free trial. Cancel whenever. We’ll remind you 7 days before your trial ends.
+[62]<button Show more results/>
+[63]<img />
+Status is online
+[64]<button Messaging
+You are on the messaging overlay. Press enter to minimize it./>
+[65]<button false/>
+[66]<button Compose message/>
+[67]<button You are on the messaging overlay. Press enter to minimize it./>
+Type to search for connections and conversations.
+[68]<input Search messages;text/>
+[69]<button false/>
+Attention screen reader users, messaging items continuously update. Please use the tab and shift + tab keys instead of your up and down arrow keys to navigate between messaging items.
+[70]<div Status is online
+Mahmoud El-Nezely
+Apr 7
+Mahmoud: yoo ghulam/>
+[71]<button false>Open the options list in your conversation with Mahmoud El-Nezely and Usman Khan/>
+[72]<div Alibaba Cloud Global
+Mar 31
+Sponsored
+Imagine building an AI model faster than making coffee — 5 minutes is all it takes! With Alibaba Cloud’s 2025 Generative AI Solution Whitepaper, the future of AI democratization is now within reach.
+🚀 Why You Need This Whitepaper:Qwen2.5 Unleashed: Achieve 15% higher accuracy in NLP tasks with our latest multimodal breakthrough.One-Click Magic: Deploy GPU clusters optimized for Qwen2.5’s architecture—no coding required, in minutes.Proven Impact: A logistics giant cut training costs by 45% using Qwen2.5 + DeepSeek’s auto-scaling.Don’t let this opportunity pass you by!
+Register Today to unlock the full document and take the first step towards your AI capabilities!
+1
+1 new notification/>
+[73]<button false>Open the options list in your conversation with Alibaba Cloud Global/>
+[74]<div Status is online
+Ahmad Zharif Zaharil, AMIChemE
+Mar 27
+Ahmad Zharif: Hi Usman! I’m Zharif – we recently launched CoffeeSpace, a Hinge-like cofounder matching app & just hit 10,000 users (+ featured on TechCrunch)!
+
+If you’re looking/exploring ideas, we'd love for you to try it out: https://coffeespace.onelink.me/aOZM/link (ref code: LINKEDQ1, exp Mar 31)/>
+[75]<button false>Open the options list in your conversation with Ahmad Zharif Zaharil, AMIChemE and Usman Khan/>
+[76]<div Jacob Wylie
+Mar 26
+You: Hi Jacob, thank you for reaching out. I would like to learn more about this opportunity.
+I have 2 friends as well who would like to join/>
+[77]<button false>Open the options list in your conversation with Jacob Wylie and Usman Khan/>
+[78]<div Status is reachable
+Mohammed Halboup
+Mar 23
+Mohammed sent a post/>
+[79]<button false>Open the options list in your conversation with Usman Khan and Mohammed Halboup/>
+[80]<div LinkedIn
+Mar 21
+LinkedIn Offer
+Hi there, Usman!
+We’ve recently seen an increase in job postings that might be a good fit. Would you like to try Premium for free to learn more about these opportunities?/>
+[81]<button false>Open the options list in your conversation with LinkedIn/>
+[82]<div Immigration, Refugees and Citizenship Canada / Immigration, Réfugiés et Citoyenneté Canada
+Mar 11
+Sponsored
+Your skills are in demand in Canada./>
+[83]<button false>Open the options list in your conversation with Immigration, Refugees and Citizenship Canada / Immigration, Réfugiés et Citoyenneté Canada/>
+[84]<div Status is offline
+SM Mushtaq Bokhari
+Feb 3
+You: ohhhhhhhhhhhh suiiiiiiiiiiiiiiiiiiiii/>
+[85]<button false>Open the options list in your conversation with SM Mushtaq Bokhari and Usman Khan/>
+[86]<div Status is offline
+Manuel Kania
+Feb 2
+Manuel: No fixed date yet./>
+[87]<button false>Open the options list in your conversation with Manuel Kania and Usman Khan/>
+[88]<input checkbox/>
+Synera
+Jan 23
+[89]<button false>Open the options list in your conversation with {0} and Usman Khan/>
+Synera: Hello Usman,
+
+thanks for your message. Can you please apply on this page and send us your CV: https://www.synera.io/careers#job-473687
+
+Thanks
+[90]<div University of Malaya
+Oct 21, 2024
+You: Dear Sir/Madam
+
+I am Usman Khan, Student ID:  23089904  , EMGS application number:  E701180588  .
+Unfortunately and due to personal circumstances I can’t pursue my studies in University of Malaya and in Malaysia. I contacted EMGS in order to cancel my application visa which is currently on 35% and they asked me that I should send an email to the visa office of my institute to cancel it. Can you please help me cancel my visa application as soon as possible if you need any further information, please let me know.
+
+I mailed this 3 weeks ago but no response please respond
+
+RegardsUsman Khan/>
+[91]<img />
+[92]<input checkbox/>
+[93]<button false>Open the options list in your conversation with {0} and Usman Khan/>
+[94]<div Status is offline
+Vaasu Changotra
+Jul 16, 2024
+You: Ohh np anyways Thank you very much/>
+[95]<img />
+[96]<input checkbox/>
+[97]<button false>Open the options list in your conversation with Vaasu Changotra and Usman Khan/>
+[98]<div Status is offline
+Juled Zaganjori
+Jul 8, 2024
+You: Okay, thanks/>
+[99]<img />
+[100]<input checkbox/>
+[101]<button false>Open the options list in your conversation with Juled Zaganjori and Usman Khan/>
+[102]<header Alibaba Cloud Global/>
+[103]<img />
+[104]<button Close your conversation with {0} and Usman Khan/>
+sent the following messages at 2:43 PM
+Alibaba Cloud Global
+[105]<a Alibaba Cloud Global/>
+2:43 PM
+Imagine building an AI model faster than making coffee — 5 minutes is all it takes! With Alibaba Cloud’s 2025 Generative AI Solution Whitepaper, the future of AI democratization is now within reach.
+🚀 Why You Need This Whitepaper:
+Qwen2.5 Unleashed
+: Achieve 15% higher accuracy in NLP tasks with our latest multimodal breakthrough.
+One-Click Magic
+: Deploy GPU clusters optimized for Qwen2.5’s architecture—no coding required, in minutes.
+Proven Impact
+: A logistics giant cut training costs by 45% using Qwen2.5 + DeepSeek’s auto-scaling.
+Don’t let this opportunity pass you by!
+Register Today to unlock the full document and take the first step towards your AI capabilities!
+[106]<button Download the Whitepaper/>
+... 398 pixels below - scroll or extract content to see more ...
+Current step: 1/100Current date and time: 2025-04-08 19:13
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Unknown - I am on the new tab page.",
-    "memory": "Starting the task: Go to youtube and search for 'python programming'.",
-    "next_goal": "Go to youtube"
+    "evaluation_previous_goal": "Success - I am at the jobs page",
+    "memory": "Starting with the new task. I have completed 1/10 steps",
+    "next_goal": "Search for job related to Software development"
   },
   "action": [
     {
-      "go_to_url": {
-        "url": "https://www.youtube.com/"
+      "input_text": {
+        "index": 1,
+        "text": "Software development"
+      }
+    },
+    {
+      "click_element": {
+        "index": 5
       }
     }
   ]
